@@ -22,11 +22,11 @@ class Matrix{
 			echo "<tr>";
 			for($j = 0; $j < $this->kolom; $j++){
 				echo "<td>";
-				//if(@$this->matrix[$i][$j] != null){
+				if(@$this->matrix[$i][$j] != null){
 					echo @$this->matrix[$i][$j];
-				//} else {
-					//echo "null";
-				//}
+				} else {
+					echo "#";
+				}
 				echo "</td>";	
 			} 
 			echo "</tr>";
