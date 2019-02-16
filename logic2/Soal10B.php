@@ -15,7 +15,7 @@ class Soal10B extends Matrix{
 		$this->baris = $n;
 		$this->kolom = $n;
 		
-		$da = $this->deret->getOddAndReverse($n);
+    $da = $this->deret->getOddAndReverse($n);
 		
 		echo json_encode($da);
 		echo "<p/>";
