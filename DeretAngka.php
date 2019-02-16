@@ -3,7 +3,8 @@
 class DeretAngka{
 
 	//VOID
-	//RETURN
+  //RETURN
+  // some change
 	
 	//0 2 4 6 4 2 0
 	public function getOddAndReverse($n){
