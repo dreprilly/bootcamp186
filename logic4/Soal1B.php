@@ -3,7 +3,7 @@
 INCLUDE '../Matrix.php';
 INCLUDE '../DeretAngka.php';
 
-class Soal3B extends Matrix{
+class Soal1B extends Matrix{
 
 	private $deret;
 
@@ -13,17 +13,21 @@ class Soal3B extends Matrix{
 
 	public function setMatrix($n){
 		$this->baris = $n;
-		$this->kolom = $n;
+		$this->kolom = $n*2-1;
 		
 		for($i = 0; $i < $this->baris; $i++){
+			$index = 1;
 			for($j = 0; $j < $this->kolom; $j++){
-				$this->matrix[$i][$j] = "-";
+				if($j + $i >= $n - 1 && $j - $i <= $n - 1){
+					$this->matrix[$i][$j] = " $index ";
+					$index++;
+				}
 			}
 		}
 	}
 }
 
-$jawab = new Soal4B();
+$jawab = new Soal1B();
 $jawab->form1();
 $jawab->setMatrix(@$_POST['input']);
 $jawab->showMatrix();
